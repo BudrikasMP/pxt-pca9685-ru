@@ -139,6 +139,7 @@ namespace PCA9685 {
     }
 
     export enum ServoNum {
+        //% block="Тест0"
         Servo1 = 1,
         Servo2 = 2,
         Servo3 = 3,
