@@ -2,7 +2,7 @@
  * PCA9685
  */
 //% weight=100 color=#0fbc11 icon=""
-namespace PCA9685 {
+namespace PCA9685_RU {
     let _DEBUG: boolean = false
     const debug = (msg: string) => {
         if (_DEBUG === true) {
