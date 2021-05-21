@@ -314,6 +314,7 @@ namespace PCA9685_RU {
      * @param offStep The range offset (0-4095) to turn the signal off
      */
     //% block advanced=true
+    //% block="установить параметры импульсов %PinNum %onStep %offStep %chipAddress"
     export function setPinPulseRange(pinNumber: PinNum = 0, onStep: number = 0, offStep: number = 2048, chipAddress: number = 0x40): void {
         pinNumber = Math.max(0, Math.min(15, pinNumber))
         const buffer = pins.createBuffer(2)
