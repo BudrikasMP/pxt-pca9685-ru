@@ -140,41 +140,41 @@ namespace PCA9685 {
 
     export enum ServoNum {
         //% block="Тест0"
-        Серво1 = 1,
-        Servo2 = 2,
-        Servo3 = 3,
-        Servo4 = 4,
-        Servo5 = 5,
-        Servo6 = 6,
-        Servo7 = 7,
-        Servo8 = 8,
-        Servo9 = 9,
-        Servo10 = 10,
-        Servo11 = 11,
-        Servo12 = 12,
-        Servo13 = 13,
-        Servo14 = 14,
-        Servo15 = 15,
-        Servo16 = 16,
+        Сервопривод_0 = 1,
+        Сервопривод_1 = 2,
+        Сервопривод_2 = 3,
+        Сервопривод_3 = 4,
+        Сервопривод_4 = 5,
+        Сервопривод_5 = 6,
+        Сервопривод_6 = 7,
+        Сервопривод_7 = 8,
+        Сервопривод_8 = 9,
+        Сервопривод_9 = 10,
+        Сервопривод_10 = 11,
+        Сервопривод_11 = 12,
+        Сервопривод_12 = 13,
+        Сервопривод_13 = 14,
+        Сервопривод_14 = 15,
+        Сервопривод_15 = 16,
     }
 
     export enum LEDNum {
-        LED1 = 1,
-        LED2 = 2,
-        LED3 = 3,
-        LED4 = 4,
-        LED5 = 5,
-        LED6 = 6,
-        LED7 = 7,
-        LED8 = 8,
-        LED9 = 9,
-        LED10 = 10,
-        LED11 = 11,
-        LED12 = 12,
-        LED13 = 13,
-        LED14 = 14,
-        LED15 = 15,
-        LED16 = 16,
+        Светодиод_0 = 1,
+        Светодиод_1 = 2,
+        Светодиод_2 = 3,
+        Светодиод_3 = 4,
+        Светодиод_4 = 5,
+        Светодиод_5 = 6,
+        Светодиод_6 = 7,
+        Светодиод_7 = 8,
+        Светодиод_8 = 9,
+        Светодиод_9 = 10,
+        Светодиод_10 = 11,
+        Светодиод_11 = 12,
+        Светодиод_12 = 13,
+        Светодиод_13 = 14,
+        Светодиод_14 = 15,
+        Светодиод_15 = 16,
     }
 
     export class ServoConfigObject {
@@ -344,7 +344,7 @@ namespace PCA9685 {
      * @param dutyCycle The duty cycle (0-100) to set the LED to
      */
     //% block
-    export function setLedDutyCycle(ledNum: LEDNum = 1, dutyCycle: number, chipAddress: number = 0x40): void {
+    export function установкаПараметровСветодиода (ledNum: LEDNum = 1, dutyCycle: number, chipAddress: number = 0x40): void {
         ledNum = Math.max(1, Math.min(16, ledNum))
         dutyCycle = Math.max(0, Math.min(100, dutyCycle))
         const pwm = (dutyCycle * (chipResolution - 1)) / 100
